@@ -48,3 +48,4 @@ export class Fighter {
 			}, 500)
 		});
 	}
+}
