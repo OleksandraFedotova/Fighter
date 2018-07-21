@@ -5,7 +5,7 @@ export class Fighter {
       this.health = health;
       this.power = power;
     }
-  
+ /* for future purposes may be usefull
     get health() {
       return this.health;
     }
@@ -13,7 +13,7 @@ export class Fighter {
     set health(value) {
       this.health = value;
     }
-  
+ 
     get name() {
       return this.name;
     }
@@ -29,10 +29,10 @@ export class Fighter {
     set powet(value){
 		this.power=value;
 	}
-  
+  */
     setDamage(damage) {
       this.health = this.health - damage;
-      console.log(this.name, " health = ", this.health + " units ");
+      console.log(`${this.name} health = ${this.health} + units `);
     }
 	
 	hit(enemy, point){
@@ -42,9 +42,10 @@ export class Fighter {
 	
 	knockout(){
 		return new Promise((resolve, reject) => {
-			console.log("Thime is over!!!")
+			console.log("Time is over!!!")
 			setTimeout(() => {
-			resolve();
+			resolve("Resolved!!!");
 			}, 500)
 		});
 	}
+}
